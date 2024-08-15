@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>varun kumar | Portfolio</title>
+    <style>
+        body {
+            font-family: 'geogia', serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f0f8ff, #d0f0f8);
+            margin: 0;
+            color: #333;
+        }
+        
+        header {
+            background: linear-gradient(90deg, #0077b6, #00b4d8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1, header h2 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0 0 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul li {
+            margin: 0 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        section {
+            margin: 20px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        #about {
+            background: linear-gradient(120deg, #ffafbd, #ffc3a0);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        #about .text-content {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        #about img {
+            max-height: 250px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #projects {
+            background: linear-gradient(120deg, #fdfbfb, #ebedee);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        #projects .text-content {
+            flex: 1;
+            margin-right: 20px;
+            font-size: 16px;
+        }
+
+        #projects img {
+            max-height: 250px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: linear-gradient(90deg, #0077b6, #00b4d8);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        
+        footer h2, footer h3 {
+            margin: 5px 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0077b6;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #00b4d8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>varun kumar</h1>
+        <h2>Full Stack Developer</h2>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="text-content">
+            <h2>Hello!</h2>
+            <h1>I'm varun kumar</h1>
+            <h3>Currently pursuing 3<sup>rd</sup> year Computer Science Engineering at Vignan University.</h3>
+            <h4>My hobbies include Gaming, Designing Webpages, and Database Management Systems.</h4>
+        </div>
+        <img src="portfolio1.png" alt="varun kumar">
+    </section>
+
+    <section id="projects">
+        <div class="text-content">
+            <h2>My Projects</h2>
+            <h3>Chat Pati</h3>
+            <p>Chat Pati is an online and mobile food ordering system developed for restaurant owners and food lovers. 
+            It helps customers discover the best restaurants in the city. Restaurant owners can easily register and upload their menu to start receiving online orders without any cost.</p>
+            <a href="https://tinku-1!.github.io/" target="_blank">View Project</a>
+        </div>
+        <img src="chat-pati.png" alt="Screenshot of Chat Pati Project">
+    </section>
+
+    <footer>
+        <h2>Contact Me</h2>
+        <h3>Phone: 7032332224</h3>
+        <h3>Email: varunpatnaik3@gmail.com</h3>
+    </footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
